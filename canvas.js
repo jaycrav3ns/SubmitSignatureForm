@@ -67,8 +67,8 @@ function clearForm() {
 }
 
 function saveSignature() {
-  var formName = document.getElementsByName('formName')[0].value;
-  var formTitle = document.getElementsByName('formTitle')[0].value;
+  var formName = document.getElementsByName('name')[0].value;
+  var formTitle = document.getElementsByName('title')[0].value;
 
   // Save the drawn signature as a PNG
   domtoimage.toBlob(canvas)
