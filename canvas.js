@@ -86,8 +86,11 @@ function saveSignature() {
         ctx.fillStyle = "red";
         ctx.font = "bold 12px Verdana";
         ctx.textAlign = 'center';
-        ctx.textBaseline = 'bottom';
-        ctx.fillText(formName + "\n" + formTitle, canvas.width / 2, canvas.height / 2);
+        
+        // Combine name and title into a single line
+        var combinedText = formName + ' ' + formTitle;
+
+        ctx.fillText(combinedText, canvas.width / 2, canvas.height - 10);
 
         // Save the combined result as a PNG
         domtoimage.toBlob(canvas)
